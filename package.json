@@ -12,7 +12,8 @@
   },
   "scripts": {
     "start": "yarn build && node build/index.js",
-    "build": "tsc && cp -R src/public build",
+    "build": "tsc && ",
+    "build-local": "tsc && cp -R src/public build",
     "update-html": "cp -R src/public build"
   }
 }
