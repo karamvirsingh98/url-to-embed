@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
+body {
+  background-color: #4A5759;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #F7E1D7;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #EDAFB8;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.Nav {
+  position: absolute;
+  top: 2.5vh;
+  right: 2.5vw;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2.5vw;
+  font-size: 1.25rem;
+  color: #DEDBD2;
+}
+
+.Main {
+  box-sizing: border-box;
+  padding: 10vh 5vw;
+  display: grid;
+  gap: 5vw;
+  grid-template-rows: auto 1fr auto auto;
+}
+
+.About {
+  box-sizing: border-box;
+  padding: 10vh 5vw;
+  display: grid;
+  gap: 2.5vw;
+}
+
+.InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2vw;
+  place-items: center;
+  width: 75%;
+}
+
+.Input {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-family: inherit;
+  border-radius: 0.25rem;
+}
+
+.Button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: #EDAFB8;
+  color: #0F0F0F;
+  border-radius: 0.25rem;
+}
+
+
+@media only screen and (max-width: 1150px) {
+  .InputContainer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #url {
+    font-size: 1.15rem;
+  }
+  .Nav {
+    gap: 5vw
+  }
+}
