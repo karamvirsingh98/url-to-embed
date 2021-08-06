@@ -13,6 +13,6 @@
   "scripts": {
     "start": "yarn build-local && node build/index.js",
     "build": "tsc && cp -r src/public build",
-    "update-html": "cp -R src/public build"
+    "update-html": "cp -r src/public build"
   }
 }
