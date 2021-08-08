@@ -1,91 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Embed URL Generator</title>
-  </head>
 
-  <body>
-    <div class="About">
-      <div class="Nav">
-        <a href="/"> Home </a>
-        <a href="/about"> About </a>
-      </div>
-      <h1>
-        Hi! I'm
-        <a
-          href="https://karamvirsingh98.github.io/portfolio"
-          target="_blank"
-          rel="noreferrer"
-          >Karamvir Singh</a
-        >, and I made this simple api to solve a mundane, yet unexpected
-        problem.
-      </h1>
-      <p>
-        One of the projects I'm working on included set of videos embeded in a
-        React app, which needed to be modified by my client on a regular basis.
-        The issue, however, was that regular video urls don't work in iframe
-        tags. Needless to say, my client wasn't too keen on having to dig
-        thought the embed code provided by youtube or vimeo, copy the embed url
-        from the supplied iframe tags, and then paste it into the appropriate
-        area.
-      </p>
-      <p>
-        Of course, one solution would be to use the fantastic
-        <a href="https://oembed.com/" target="_blank" rel="noreferrer"
-          >oEmbed api</a
-        >. However, this solution wasn't satisfactory, since using the oEmbed
-        api resulted in a pretty substantial case of overfetching. oEmbed's api
-        respose not only contains a lot of meta-data about the video in
-        question, it also returns a full iframe tag with some options and
-        styling enabled by default. Moreover, since oEmbed returns a complete
-        iframe tag, I would have to parse throgh that to find the actual embed
-        url I was looking for, which didn't appeal to me.
-      </p>
-      <p>
-        Since, my React component was already setup such that the only thing
-        that needed to be added to the iframe was the embed url. I wrote this
-        simple api that accepts a regular youtube or vimeo url, and returns a
-        valid embed url that can be neatly plugged into my React iframe
-        component that has already been setup with custom rules and styling
-        that, to me, are easier to work with than the iframe tags supplied by
-        oEmbed.
-      </p>
-      <p>
-        This api was made using
-        <a href="https://feathersjs.com" target="_blank" rel="noreferrer"
-          >FeathersJS</a
-        >
-        and
-        <a href="https://expressjs.com" target="_blank" rel="noreferrer"
-          >ExpressJS</a
-        >, two excellent libraries for creating microservice apis and much more.
-        The code for this api is freely avialable in this
-        <a
-          href="https://github.com/karamvirsingh98/url-to-embed"
-          target="_blank"
-          rel="noreferrer"
-          >GitHub repository</a
-        >. This project also owes a great deal to these two StackOverflow posts
-        regarding the best way to go about deconstructing
-        <a
-          href="https://stackoverflow.com/a/8260383"
-          target="_blank"
-          rel="noreferrer"
-          >YouTube</a
-        >
-        and
-        <a
-          href="https://stackoverflow.com/a/29206786"
-          target="_blank"
-          rel="noreferrer"
-          >Vimeo</a
-        >
-        links using Regular Expression (RegEx) matching.
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Embed URL Generator</title>
+</head>
+
+<body>
+  <div class="About">
+    <div class="Nav">
+      <a href="/"> Home </a>
+      <a href="/guide"> Guide </a>
+      <a href="/about"> About </a>
     </div>
-  </body>
+    <h1>
+      Hi! I'm
+      <a href="https://karamvirsingh98.github.io/portfolio" target="_blank" rel="noreferrer">Karamvir Singh</a>, and I
+      made this simple api to solve a mundane, yet unexpected
+      problem.
+    </h1>
+    <p>
+      One of the projects I'm working on included set of videos embeded in a
+      React app, which needed to be modified by my client on a regular basis.
+      The issue, however, was that regular video urls don't work in iframe
+      tags. Needless to say, my client wasn't too keen on having to dig
+      thought the embed code provided by youtube or vimeo, copy the embed url
+      from the supplied iframe tags, and then paste it into the appropriate
+      area.
+    </p>
+    <p>
+      Of course, one solution would be to use the fantastic
+      <a href="https://oembed.com/" target="_blank" rel="noreferrer">oEmbed api</a>. However, this solution wasn't
+      satisfactory, since using the oEmbed
+      api resulted in a pretty substantial case of overfetching. oEmbed's api
+      respose not only contains a lot of meta-data about the video in
+      question, it also returns a full iframe tag with some options and
+      styling enabled by default. Moreover, since oEmbed returns a complete
+      iframe tag, I would have to parse throgh that to find the actual embed
+      url I was looking for, which didn't appeal to me.
+    </p>
+    <p>
+      Since, my React component was already setup such that the only thing
+      that needed to be added to the iframe was the embed url. I wrote this
+      simple api that accepts a regular youtube or vimeo url, and returns a
+      valid embed url that can be neatly plugged into my React iframe
+      component that has already been setup with custom rules and styling
+      that, to me, are easier to work with than the iframe tags supplied by
+      oEmbed.
+    </p>
+    <p>
+      This api was made using
+      <a href="https://feathersjs.com" target="_blank" rel="noreferrer">FeathersJS</a>
+      and
+      <a href="https://expressjs.com" target="_blank" rel="noreferrer">ExpressJS</a>, two excellent libraries for
+      creating microservice apis and much more.
+      The code for this api is freely avialable in this
+      <a href="https://github.com/karamvirsingh98/url-to-embed" target="_blank" rel="noreferrer">GitHub repository</a>.
+      This project also owes a great deal to these two StackOverflow posts
+      regarding the best way to go about deconstructing
+      <a href="https://stackoverflow.com/a/8260383" target="_blank" rel="noreferrer">YouTube</a>
+      and
+      <a href="https://stackoverflow.com/a/29206786" target="_blank" rel="noreferrer">Vimeo</a>
+      links using Regular Expression (RegEx) matching.
+    </p>
+  </div>
+</body>
+
 </html>

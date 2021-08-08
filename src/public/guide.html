@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Embed URL Generator</title>
+</head>
+
+<body>
+  <div class="Guide">
+    <div class="Nav">
+      <a href="/"> Home </a>
+      <a href="/guide"> Guide </a>
+      <a href="/about"> About </a>
+    </div>
+    <h1>Using this API is super simple!</h1>
+    <h3>
+      All you need to do is send a POST request to
+      https://url-to-embed.herokuapp.com/convert, <br/> with the request body
+      formatted as: { "url" : "your-url-here" } 
+    </h3>
+    <h3>
+      Let's say you want to convert the youtube video at
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
+        https://www.youtube.com/watch?v=dQw4w9WgXcQ
+      </a>
+    </h3>
+    <div class="Example">
+      <p>Using fetch, your request would look something like:</p>
+      <pre>
+fetch("https://url-to-embed.herokuapp.com", {
+  method: "POST,
+  headers: {
+    "Content-Type" : "application/json"
+  }
+  body: "{
+    "url" : "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+  }"
+})
+.then(res => res.json().then(data => console.log(data)))</pre>
+    </div>
+    <div class="Example">
+      <p>Using axios, your request would look something like:</p>
+      <pre>
+axios.post("https://url-to-embed.herokuapp.com", {
+    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  })
+  .then(response => console.log(response))</pre>
+    </div>
+  </div>
+</body>
+
+</html>

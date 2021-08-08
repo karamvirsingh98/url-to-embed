@@ -14,6 +14,7 @@ app.configure(express.rest())
 
 //setup routes for html and api endpoint
 app.use("/", express.static(`${__dirname}/public`))
+app.use("/guide", express.static(`${__dirname}/public/guide.html`));
 app.use("/about", express.static(`${__dirname}/public/about.html`));
 app.use('/convert', new ConversionService())
 

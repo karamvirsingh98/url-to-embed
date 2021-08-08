@@ -6,14 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="index.css" />
+  <meta name="description" content="A simple api that lets you convert video urls into embeddable urls" />
   <title>Embed URL Generator</title>
-  <meta name="description" content="A simple website and api that lets you convert video urls into embeddable urls" />
 </head>
 
 <body>
   <div class="Main">
     <div class="Nav">
       <a href="/"> Home </a>
+      <a href="/guide"> Guide </a>
       <a href="/about"> About </a>
     </div>
     <h1>
@@ -21,13 +22,14 @@
     </h1>
     <h2>
       Paste a Youtube or Vimeo url into the input box below, and click convert
-      to retrieve your embeddable url. <br />
-      You can also send a post request to 
-      https://url-to-embed.herokuapp.com/convert, <br />
-      with the request body formatted as {"url" : "your-video-url"}.
+      to retrieve your embeddable url.
+    </h2>
+    <h2>
+      You can try it out below, or check out the 
+      <a href="/guide"> guide </a> for how to call the api.
     </h2>
     <div class="InputContainer">
-      <input class="Input" id="input" placeholder="Enter yout url here!"/>
+      <input class="Input" id="input" placeholder="Enter your url here!" />
       <div class="Button" onclick="convertURL()">Convert</div>
     </div>
     <h2 id="url"></h2>
