@@ -45,10 +45,14 @@ fetch("https://url-to-embed.herokuapp.com", {
     <div class="Example">
       <p>Using axios, your request would look something like:</p>
       <pre>
-axios.post("https://url-to-embed.herokuapp.com", {
-    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-  })
-  .then(response => console.log(response))</pre>
+axios({
+  method: 'post',
+  url: "https://url-to-embed.herokuapp.com/convert",
+  data: {
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  }
+})
+.then(response => console.log(response))</pre>
     </div>
   </div>
 </body>
