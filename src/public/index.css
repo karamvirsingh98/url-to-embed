@@ -28,6 +28,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  transition: text-decoration 100ms;
 }
 
 .Nav {
@@ -38,7 +39,6 @@ a:hover {
   grid-auto-flow: column;
   gap: 2.5vw;
   font-size: 1.25rem;
-  color: #DEDBD2;
 }
 
 .Main {
