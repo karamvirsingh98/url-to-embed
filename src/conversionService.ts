@@ -13,7 +13,7 @@ export default class ConversionService {
     function generateEmbed(url: string) {
       
       //for youtube urls
-      if (url.includes("youtube" || "youtu.be")) {
+      if (url.includes("youtube") || url.includes('youtu.be')) {
         const regExp =
           /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
         const match = url.match(regExp);
