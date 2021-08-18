@@ -26,7 +26,7 @@ export default class ConversionService {
       else if (url.includes("vimeo")) {
         const regExp = /(?:vimeo)\.com.*(?:videos|video|channels|)\/([\d]+)/i;
         const match = url.match(regExp);
-        return match && match[1].length >= 9
+        return match && match[1].length >= 7
           ? `https://player.vimeo.com/video/${match[1]}`
           : "invalid url";
       }
