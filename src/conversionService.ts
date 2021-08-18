@@ -15,10 +15,10 @@ export default class ConversionService {
       //for youtube urls
       if (url.includes("youtube" || "youtu.be")) {
         const regExp =
-          /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+          /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
         const match = url.match(regExp);
         return match
-          ? `https://www.youtube.com/embed/${match[7]}`
+          ? `https://www.youtube.com/embed/${match[1]}`
           : "invalid url";
       }
 
