@@ -17,7 +17,7 @@ export default class ConversionService {
         const regExp =
           /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
         const match = url.match(regExp);
-        return match && match[7].length == 11
+        return match && match[7].length === 11
           ? `https://www.youtube.com/embed/${match[7]}`
           : "invalid url";
       }
@@ -26,7 +26,7 @@ export default class ConversionService {
       else if (url.includes("vimeo")) {
         const regExp = /(?:vimeo)\.com.*(?:videos|video|channels|)\/([\d]+)/i;
         const match = url.match(regExp);
-        return match && match[1].length == 9
+        return match && match[1].length >= 9
           ? `https://player.vimeo.com/video/${match[1]}`
           : "invalid url";
       }
